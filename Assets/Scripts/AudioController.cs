@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
+    public SceneLoader SceneLoader;
     public AudioSource norm;
     public AudioSource walk;
-
+    public AudioSource intro;
+    public AudioSource loader;
     // Start is called before the first frame update
+    void Awake() {
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
-        Invoke("volUp", 4.0f);
+
     }
 
     // Update is called once per frame
@@ -19,9 +24,19 @@ public class AudioController : MonoBehaviour
         
     }
 
+    public void loadScene1(){
+        Invoke("volUp", 4.0f);
+        intro.Stop();
+        loader.Play();        
+    }
+
     void volUp()
     {
         norm.volume = 0.5f;
-        walk.volume = 0.3f;
+        walk.Play();
+    }
+
+    public void loadScene2(){
+        intro.Stop();
     }
 }

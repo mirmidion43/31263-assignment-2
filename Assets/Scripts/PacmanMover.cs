@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PacmanMover : MonoBehaviour
 {
-    //private Tween activeTween;
-    private List<Tween> activeTweens = new List<Tween>();
    
     private Tween activeTween = null;
     public GameObject Pacman;
