@@ -54,10 +54,10 @@ public class GhostSpin : MonoBehaviour
             if(gameObject.transform.position== new Vector3(-10.0f,-3.0f,0.0f))
                 addTween(gameObject.transform.position,new Vector3(10.0f,-3.0f,0.0f), 2.0f);
             if(gameObject.transform.position== new Vector3(10.0f,-3.0f,0.0f))
-                addTween(gameObject.transform.position, new Vector3(10.0f,-9.5f,0.0f), 2.0f);
-            if(gameObject.transform.position==new Vector3(10.0f,-9.5f,0.0f))
-                addTween(gameObject.transform.position, new Vector3(-10.0f,-9.5f,0.0f), 2.0f);
-            if(gameObject.transform.position==new Vector3(-10.0f,-9.5f,0.0f))
+                addTween(gameObject.transform.position, new Vector3(10.0f,-10.0f,0.0f), 2.0f);
+            if(gameObject.transform.position==new Vector3(10.0f,-10.0f,0.0f))
+                addTween(gameObject.transform.position, new Vector3(-10.0f,-10.0f,0.0f), 2.0f);
+            if(gameObject.transform.position==new Vector3(-10.0f,-10.0f,0.0f))
                 addTween(gameObject.transform.position, new Vector3(-10.0f,-3.0f,0.0f), 2.0f);
         }
     }

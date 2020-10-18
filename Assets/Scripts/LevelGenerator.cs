@@ -49,9 +49,9 @@ public class LevelGenerator : MonoBehaviour
     // Called before Start
     private void Awake() 
     {
-        GameObject[] remove = GameObject.FindGameObjectsWithTag("1");
-        for(int i = 0; i < remove.Length; i++)
-        Destroy(remove[i]);
+        //GameObject[] remove = GameObject.FindGameObjectsWithTag("1");
+        //for(int i = 0; i < remove.Length; i++)
+        //Destroy(remove[i]);
 
         Parent1 = new GameObject();
         Parent2 = new GameObject();
