@@ -2,20 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioController : MonoBehaviour
+public class IntroAudioController : MonoBehaviour
 {
     public SceneLoader SceneLoader;
-    public AudioSource norm;
-    public AudioSource walk;
     public AudioSource intro;
-    public AudioSource loader;
+
     // Start is called before the first frame update
-    void Awake() {
-        DontDestroyOnLoad(gameObject);
-    }
     void Start()
     {
-        loadScene1();
+
     }
 
     // Update is called once per frame
@@ -25,16 +20,7 @@ public class AudioController : MonoBehaviour
     }
 
     public void loadScene1(){
-        Invoke("volUp", 4.0f);
-        intro.Stop();
-        loader.Play();        
-    }
-
-    void volUp()
-    {
-        norm.Play();
-        norm.volume = 0.5f;
-        walk.Play();
+        intro.Stop();       
     }
 
     public void loadScene2(){
@@ -43,7 +29,5 @@ public class AudioController : MonoBehaviour
 
     public void loadIntro(){
         intro.Play();
-        norm.Stop();
-        walk.Stop();
     }
 }

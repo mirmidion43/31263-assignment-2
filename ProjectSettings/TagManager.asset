@@ -9,6 +9,8 @@ TagManager:
   - 3
   - 4
   - Pacman
+  - Score
+  - Exit
   layers:
   - Default
   - TransparentFX

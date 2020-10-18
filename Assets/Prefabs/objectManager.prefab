@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4425363369671338225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4425363369671338239}
+  - component: {fileID: 4425363369671338224}
+  - component: {fileID: 4425363369671338238}
+  - component: {fileID: 4425363369671338237}
+  m_Layer: 0
+  m_Name: objectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4425363369671338239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425363369671338225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4425363369671338224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425363369671338225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76afa51d1c7498428cb8955f5a2d33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pacman: {fileID: 0}
+--- !u!114 &4425363369671338238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425363369671338225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c691540587ef2ab459928e57215a319f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OutCorner: {fileID: 7624468502401353798, guid: 88c72b7d5c1aec6429e26b6585dd9917,
+    type: 3}
+  OutWall: {fileID: 8868698405141434609, guid: 3575ecabdf9df1a42b8b3b8b543b71b1, type: 3}
+  InCorner: {fileID: 8035935105106415309, guid: 0e4ba8db25cc9a540b8b057c4c1130d8,
+    type: 3}
+  InWall: {fileID: 3086153510876894667, guid: db056d454db11794c879ae56bdbe3f4e, type: 3}
+  TJunc: {fileID: 5617203920280027516, guid: e9bd34f061d33194e9153d1cf5b63429, type: 3}
+  normPellet: {fileID: 1312635996240247015, guid: 4fb0f938eb6bc4343ba3e5cc6f6f2edb,
+    type: 3}
+  powPellet: {fileID: 6047471555923979133, guid: f0f0d245b59a8c44fb140253318415b8,
+    type: 3}
+  RInCorner: {fileID: 2177160775308119062, guid: c996b93022f5d1945a689b3ea27ba934,
+    type: 3}
+  Parent1: {fileID: 0}
+  Parent2: {fileID: 0}
+  Parent3: {fileID: 0}
+  Parent4: {fileID: 0}
+--- !u!114 &4425363369671338237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425363369671338225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b9b8bc0f8c57a4eab75eb9c34a8c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  score: {fileID: 0}
+  timer: {fileID: 0}
