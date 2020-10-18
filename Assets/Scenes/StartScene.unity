@@ -5202,11 +5202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4df42c14f0d5624e9be6ff762653de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneLoader: {fileID: 0}
-  norm: {fileID: 0}
-  walk: {fileID: 0}
+  SceneLoader: {fileID: 2077190407}
   intro: {fileID: 429655534}
-  loader: {fileID: 0}
 --- !u!4 &429655532
 Transform:
   m_ObjectHideFlags: 0
@@ -11811,7 +11808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1731984b997ab2c4c84edff67c50573f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioController: {fileID: 0}
+  audioController: {fileID: 429655529}
 --- !u!4 &2077190408
 Transform:
   m_ObjectHideFlags: 0
