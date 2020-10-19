@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject score;
     public Text timer;
     public GameController gameController;
+    public AudioSource pickup;
     private int scoreInt = 0;
     // Start is called before the first frame update
     void Start()
@@ -24,14 +25,6 @@ public class UIManager : MonoBehaviour
         {
             text.SetActive(true);
         }
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            scoreInt += 100;
-            score.GetComponent<Text>().text = "" + scoreInt;
-        }
-           
-
     }
 
     public void loadIntro(){
@@ -39,4 +32,14 @@ public class UIManager : MonoBehaviour
         gameController.loadIntro();
     }
 
+    public void PelletGet() {
+        pickup.Play();
+        scoreInt += 10;
+        score.GetComponent<Text>().text = "" + scoreInt;
+    }
+
+    public void CherryGet() {
+        scoreInt += 100;
+        score.GetComponent<Text>().text = "" + scoreInt;
+    }
 }

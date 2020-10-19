@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5107518958099007342}
   - component: {fileID: 5107518958099007343}
   - component: {fileID: 5107518958099007337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bluey
   m_TagString: Untagged
   m_Icon: {fileID: 0}

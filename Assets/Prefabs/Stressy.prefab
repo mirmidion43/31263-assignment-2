@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2305768885267689048}
   - component: {fileID: 2305768885267689049}
   - component: {fileID: 2305768885267689046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stressy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

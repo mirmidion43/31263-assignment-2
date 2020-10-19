@@ -11,6 +11,9 @@ TagManager:
   - Pacman
   - Score
   - Exit
+  - Wall
+  - objectManager
+  - cherry
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Non-stopping
   - 
   - 
   - 
