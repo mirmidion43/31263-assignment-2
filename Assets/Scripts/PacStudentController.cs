@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PacmanMover : MonoBehaviour
+public class PacStudentController : MonoBehaviour
 {
    
     private Tween activeTween = null;
