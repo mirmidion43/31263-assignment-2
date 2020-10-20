@@ -14,6 +14,8 @@ TagManager:
   - Wall
   - objectManager
   - cherry
+  - Portal1
+  - Portal2
   layers:
   - Default
   - TransparentFX

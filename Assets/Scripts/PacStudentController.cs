@@ -14,6 +14,7 @@ public class PacStudentController : MonoBehaviour
     public Animator pacAnimator;
     public ParticleSystem dust;
     private bool isIntro = true;
+    public BoxCollider probe;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +63,11 @@ public class PacStudentController : MonoBehaviour
             
         movePacman();
 
+        //if(!isWalking)
+          //  probe.enabled = true;
+        //else
+          //  probe.enabled = false;
+
         if(isWalking && !walk.isPlaying)
         {
             walk.Play();
@@ -75,7 +81,7 @@ public class PacStudentController : MonoBehaviour
             pacAnimator.enabled=false;
             dust.Stop();
         }
-           
+
     }
 
     private void movePacman(){
