@@ -11,7 +11,7 @@ public class CherryController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnCherry", 30.0f, 30.0f);
+        InvokeRepeating("SpawnCherry", 34.0f, 30.0f);
     }
 
     // Update is called once per frame
