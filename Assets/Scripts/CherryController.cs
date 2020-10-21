@@ -65,4 +65,8 @@ public class CherryController : MonoBehaviour
     {
         activeTween = null;
     }
+
+    public void stopSpawn(){
+        CancelInvoke();
+    }
 }

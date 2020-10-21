@@ -7,14 +7,14 @@ public class PacStudentController : MonoBehaviour
    
     private Tween activeTween = null;
     public GameObject Pacman;
-    private string lastInput = null;
-    private string currentInput = null;
+    public string lastInput = null;
+    public string currentInput = null;
     public AudioSource walk;
     public bool isWalking = false;
     public Animator pacAnimator;
     public ParticleSystem dust;
     private bool isIntro = true;
-    public BoxCollider probe;
+    public UIManager uIManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,11 +62,6 @@ public class PacStudentController : MonoBehaviour
         
             
         movePacman();
-
-        //if(!isWalking)
-          //  probe.enabled = true;
-        //else
-          //  probe.enabled = false;
 
         if(isWalking && !walk.isPlaying)
         {
@@ -170,5 +165,17 @@ public class PacStudentController : MonoBehaviour
 
     private void WaitIntro(){
         isIntro = false;
+    }
+
+    public void clearMovement()
+    {
+        activeTween = null;
+        lastInput = null;
+        currentInput = null;
+    }
+    public void respawnPacman(){
+        Pacman.transform.position = new Vector3(-12.5f,13.5f,0.0f);
+        Time.timeScale = 1;
+        uIManager.loseLife();
     }
 }

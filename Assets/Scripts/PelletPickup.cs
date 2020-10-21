@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PelletPickup : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +18,19 @@ public class PelletPickup : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        UIManager uIManager = GameObject.FindWithTag("objectManager").GetComponent<UIManager>();
-        uIManager.PelletGet();
-        GameObject.Destroy(gameObject);
+        if(other.tag == "Pacman" && !other.isTrigger)
+        {
+            UIManager uIManager = GameObject.FindWithTag("objectManager").GetComponent<UIManager>();
+            if(TryGetComponent(out Animator anim))
+            {
+                uIManager.PelletGet(10);
+                uIManager.Scared();
+            //pick up pow pellet code
+            }
+            else
+                uIManager.PelletGet(0);
+                GameObject.Destroy(gameObject);
+        }
+        
     }
 }

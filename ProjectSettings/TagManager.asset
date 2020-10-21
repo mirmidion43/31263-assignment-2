@@ -16,6 +16,7 @@ TagManager:
   - cherry
   - Portal1
   - Portal2
+  - pellet
   layers:
   - Default
   - TransparentFX

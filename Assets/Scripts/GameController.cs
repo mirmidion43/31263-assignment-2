@@ -7,8 +7,15 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public AudioSource norm;
+    public AudioSource scared;
+    public AudioSource dead;
     public AudioSource loader;
     public Text countdown;
+    private float timer = 0;
+    public bool go = false;
+    public GameObject panel;
+    public UIManager uIManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +29,15 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(go)
+        {
+            timer+=Time.deltaTime;
+            uIManager.timeUpdate(timer);
+        }
+    }
+
+    public float getTimer(){
+        return timer;
     }
 
     private void Countdown2(){
@@ -33,11 +48,12 @@ public class GameController : MonoBehaviour
         countdown.text = "1";
     }
     private void Go(){
-        countdown.text = "Go!";
+        countdown.text = "GO!";
     }
 
     private void Clear(){
-        countdown.enabled = false;
+        panel.SetActive(false);
+        go = true;
     }
     public void loadScene1(){
         Invoke("volUp", 4.0f);
@@ -53,6 +69,28 @@ public class GameController : MonoBehaviour
     public void loadIntro(){
         norm.Stop();
         SceneManager.LoadScene(0);
+    }
+
+    public void scaredMusic(){
+        norm.Pause();
+        scared.Play();
+    }
+
+    public void stopScared(){
+        scared.Stop();
+        norm.UnPause();
+    }
+
+    public void ghostDied(GhostCollisions ghost){
+        scared.volume = 0;
+        dead.Stop();
+        dead.Play();
+        StartCoroutine(dying(ghost));
+    }
+    IEnumerator dying(GhostCollisions ghost){
+        yield return new WaitForSeconds(5.0f);
+        scared.volume = 1.0f;
+        ghost.Heal();
     }
 }
 
