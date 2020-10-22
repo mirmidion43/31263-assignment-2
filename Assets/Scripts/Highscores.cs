@@ -14,10 +14,7 @@ public class Highscores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        highScore = PlayerPrefs.GetInt(highScoreKey,0);
-        bestTime = PlayerPrefs.GetFloat(timeScoreKey,0.0f);
-        highScoreBoards.text = "" + highScore;
-        timeUpdate(bestTime);
+        displayHighscore();
     }
 
     // Update is called once per frame
@@ -32,5 +29,19 @@ public class Highscores : MonoBehaviour
         float milliseconds = (time%1) * 100;
 
         bestTimeBoard.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
+    }
+
+    public void resetHighscore(){
+        PlayerPrefs.SetInt(highScoreKey, 0);
+        PlayerPrefs.SetFloat(timeScoreKey, 0.0f);
+        PlayerPrefs.Save();
+        displayHighscore();
+    }
+
+    public void displayHighscore(){
+        highScore = PlayerPrefs.GetInt(highScoreKey,0);
+        bestTime = PlayerPrefs.GetFloat(timeScoreKey,0.0f);
+        highScoreBoards.text = "" + highScore;
+        timeUpdate(bestTime);
     }
 }
